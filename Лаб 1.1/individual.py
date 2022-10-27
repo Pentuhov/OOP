@@ -27,8 +27,8 @@ class Rational:
 #умножение на произвольное целое число типа
     def multiply(self, other):
         length = int(self.second)
-        second = (self.second * other) % (10 ** length)
-        fractal = (self.second * other) // (10 ** length)
+        second = (self.second * other) % (length)
+        fractal = (self.second * other) // (length)
         first = self.first * other + fractal
         return Rational(first, second)
 
